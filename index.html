@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced E-commerce JS</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        background: #eee;
+      }
+      .panel {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        flex: 1;
+        min-height: 400px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .product-card {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      .tag {
+        background: #007bff;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8em;
+      }
+      h2 {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h2>Catálogo Unificado</h2>
+      <div id="catalogo-total"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Panel de Estadísticas</h2>
+      <div id="stats"></div>
+    </div>
+
+    <script src="datos_electronica.js"></script>
+    <script src="datos_textil.js"></script>
+    <script src="logica_unificacion.js"></script>
+  </body>
+</html>
