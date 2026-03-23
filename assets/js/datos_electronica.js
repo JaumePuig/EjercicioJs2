@@ -7,7 +7,6 @@ function limpiarStockBajo(limite) {
       filtrados.push(element);
     }
   });
-  console.log(filtrados);
 }
 
 limpiarStockBajo(3);
