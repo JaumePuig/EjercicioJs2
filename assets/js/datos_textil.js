@@ -1,6 +1,6 @@
-const productosB = [
-  { id: 1, nombre: "Camiseta", precio: 20, stock: 50, categoria: "ropa" },
-  { id: 2, nombre: "Pantalon", precio: 35, stock: 30, categoria: "ropa" }
+export const productosB = [
+  { id: 3, nombre: "Camiseta", precio: 20, stock: 50, categoria: "ropa" },
+  { id: 4, nombre: "Pantalon", precio: 35, stock: 30, categoria: "ropa" }
 ];
 
 // descuento
