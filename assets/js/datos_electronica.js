@@ -1,4 +1,9 @@
-let productosA = [[0,"Tablet", 100, 5,"tecnologia"],[0,"Movil", 200, 50,"tecnologia"],[0,"PC", 300, 1,"tecnologia"]];
+export let productosA = [{
+  id: 0, nombre: "Tablet", precio: 20, stock: 50, categoria: "tecnologia"},
+  {
+  id: 1, nombre: "PC", precio: 200, stock: 2, categoria: "tecnologia"},
+  {
+  id: 2, nombre: "Movil", precio: 2000, stock: 77, categoria: "tecnologia"}];
 
 function limpiarStockBajo(limite) {
   let filtrados = [];
