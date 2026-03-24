@@ -1,7 +1,8 @@
+import { aplicarDescuentoUsuario } from "./logica_unificacion.js";
 const usuarios = [
-  { nombre: "Jaume", esVIP: true, carrito: [100] },
-  { nombre: "Jesus", esVIP: false, carrito: [200] },
-  { nombre: "Fernando", esVIP: false, carrito: [500] }
+  { nombre: "Jaume", esVIP: true, carrito: [100,200,3000] },
+  { nombre: "Jesus", esVIP: false, carrito: [200, 200, 300] },
+  { nombre: "Fernando", esVIP: false, carrito: [500, 100, 1000] }
   
 ];
 
@@ -40,3 +41,17 @@ calcularTotal("Jesus");
 calcularTotal("Jaume");
 calcularTotal("Fernando")
 contarVIPs();
+
+function mostrarPrecios(usuario) {
+  usuario.carrito.forEach(element => {
+    console.log("Precio:" + element);
+  });  
+}
+mostrarPrecios(usuarios[0]);
+aplicarDescuentoUsuario(usuarios, 0, 20);
+
+mostrarPrecios(usuarios[0]);
+
+calcularTotal("Jaume");
+
+console.log(usuarios);

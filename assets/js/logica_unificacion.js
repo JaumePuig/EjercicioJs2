@@ -51,8 +51,8 @@ contadorClothes.textContent = "Stock ropa: " + clotheProducts;
 stats.appendChild(contadorTech);
 stats.appendChild(contadorClothes);
 
-function mostrarDisponibles() {
-  granInventario.forEach(element => {
+function mostrarDisponibles(usuario) {
+  usuario.forEach(element => {
     if (element.stock > 0) {
       console.log("El producto " + element.nombre + " está disponible por " + element.precio + "€");
     }else{
@@ -61,14 +61,21 @@ function mostrarDisponibles() {
   });  
 }
 
-mostrarDisponibles();
+mostrarDisponibles(granInventario);
 
-function aplicarDescuento(descuento) {
-  granInventario.forEach(element => {
+function aplicarDescuento(usuario, descuento) {
+  usuario.forEach(element => {
     element.precio = element.precio - ((element.precio * descuento) / 100);
   });
 }
 
-aplicarDescuento(10);
+export function aplicarDescuentoUsuario(usuarios, usuario, descuento) {
+  usuarios[usuario].carrito.forEach(element => {
+    element = element - ((element * descuento) / 100);
+    console.log("Nuevo precio descontado" + element);
+  });
+}
 
-mostrarDisponibles();
+aplicarDescuento(granInventario, 10);
+
+mostrarDisponibles(granInventario);
