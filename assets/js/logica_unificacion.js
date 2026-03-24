@@ -50,3 +50,25 @@ contadorClothes.textContent = "Stock ropa: " + clotheProducts;
 
 stats.appendChild(contadorTech);
 stats.appendChild(contadorClothes);
+
+function mostrarDisponibles() {
+  granInventario.forEach(element => {
+    if (element.stock > 0) {
+      console.log("El producto " + element.nombre + " está disponible por " + element.precio + "€");
+    }else{
+      console.log(element.nombre + "está agotado");
+    }
+  });  
+}
+
+mostrarDisponibles();
+
+function aplicarDescuento(descuento) {
+  granInventario.forEach(element => {
+    element.precio = element.precio - ((element.precio * descuento) / 100);
+  });
+}
+
+aplicarDescuento(10);
+
+mostrarDisponibles();
